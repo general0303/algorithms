@@ -2,7 +2,7 @@ from Driver import Driver
 
 
 def list_of_stolen_cars():
-    file = open('cars_01.txt', 'rb')
+    file = open('cars_01.dat', 'rb')
     byte = file.read()
     str = byte.decode('utf-8')
     lines = str.split('\n')
@@ -14,7 +14,7 @@ def list_of_stolen_cars():
 
 
 def was_the_car_stolen(number):
-    file = open('cars_01.txt', 'rb')
+    file = open('cars_01.dat', 'rb')
     byte = file.read()
     str = byte.decode('utf-8')
     lines = str.split('\n')
@@ -30,12 +30,12 @@ def was_the_car_stolen(number):
 
 
 f = open('cars.txt', 'r')
-file = open('cars_01.txt', 'wb')
+file = open('cars_01.dat', 'wb')
 byte = f.read().encode('utf-8')
 f.close()
 file.write(byte)
 file.close()
-file = open('cars_01.txt', 'rb')
+file = open('cars_01.dat', 'rb')
 byte = file.read()
 str = byte.decode('utf-8')
 lines = str.split('\n')
